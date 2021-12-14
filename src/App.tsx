@@ -3,8 +3,32 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Hier ensteht die Website um die Ergebnisse unserer CO2-Ampel anzuzeigen und diese manuell zu steuern</h1>
+    <div className='Grid'>
+      <Header />
+      <Main />
+    </div>
   );
 }
 
 export default App;
+
+
+function Header(){
+  return(
+    <div className='Header'>
+      <h2 className='Titel'>Co2Ampel</h2>
+      <a href="#home" className="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+  )
+}
+
+function Main(){
+  return(
+    <div className='Main'>
+      <p>Main</p>
+
+    </div>
+  )
+}
