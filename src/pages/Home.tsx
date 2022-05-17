@@ -1,5 +1,3 @@
-var ws281x = require('rpi-ws281x');
-
 function Home() {
 
     return (
