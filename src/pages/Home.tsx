@@ -1,4 +1,4 @@
-var ws281x = require('rpi-ws281x-native');
+var ws281x = require('rpi-ws281x');
 
 function Home() {
 
