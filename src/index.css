@@ -1,9 +1,9 @@
-#root{
+#root {
   height: 100%;
 }
 
 
-html{
+html {
   height: 100%;
 }
 
@@ -16,10 +16,80 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
+  background: linear-gradient(to top left, rgb(255, 118, 118), rgb(106, 106, 255))
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  color: black;
+}
+
+#redbutton {
+  background-color: red;
+}
+
+#yellowbutton {
+  background-color: yellow;
+}
+
+#greenbutton {
+  background-color: greenyellow;
+}
+
+
+
+
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: red;
+  position: absolute;
+  z-index: 2;
+}
+
+.circle0 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: yellow;
+  position: absolute;
+  z-index: 3;
+  top: 27%;
+}
+
+.circle1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: greenyellow;
+  position: absolute;
+  z-index: 4;
+  top: 54%;
+}
+
+.square {
+  width: 200px;
+  height: 600px;
+  background-color: grey;
+  position: absolute;
+  border-style: solid;
+  border-color: black;
+  z-index: 1;
 }
