@@ -3,12 +3,8 @@ import { useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Evaluation from "./pages/Evaluation";
-import Options from "./pages/Options";
-import NoPage from "./pages/NoPage";
+import Home from "./Home";
+
 
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 const client = new W3CWebSocket('ws://127.0.0.1:8000');
@@ -31,16 +27,7 @@ export default function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="Evaluation" element={<Evaluation />} />
-          <Route path="Options" element={<Options />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Home />
   )
 }
 

@@ -1,53 +1,114 @@
-.Grid{
+.Main {
   height: 100%;
   display: grid;
-  grid-template-areas: 'Header Header' 'Main Main';
-  grid-template-rows:  100px 1fr ;
+  grid-template-areas: 'Header Header''UpperLeft Right''LowerLeft Right';
+  grid-template-rows: 100px 1fr 30%;
+  grid-template-columns: auto 40vh;
+  background: linear-gradient(to bottom right, #dd81e7, #00a7da);
 }
 
-.Header{
+.Header {
   grid-area: Header;
   display: flex;
   justify-content: space-evenly;
-  
+
   background-color: rgb(71, 71, 71);
   overflow: hidden;
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
-.Header a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+
+.Title {
+  color: white;
+  font-size: 40px;
 }
 
-/* Change the color of links on hover */
-.Header a:hover {
-  background-color: #ddd;
+
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
   color: black;
 }
 
-/* Add a color to the active/current link */
-.Header a.active {
-  background-color: #00a7da;
-  color: white;
+#redbutton {
+  background-color: red;
+}
+
+#yellowbutton {
+  background-color: yellow;
+}
+
+#greenbutton {
+  background-color: greenyellow;
+}
+
+.trafficLight {
+  grid-area: Right;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.MainPart {
+  grid-area: UpperLeft;
+}
+
+.graphArea {
+  grid-area: LowerLeft;
+  height: 100%;
+  width: 100%;
+
+  background-color: #c1e7f3;
+
 }
 
 
-.Titel{
-  color: white;
-  font-size: 25px;
+
+
+
+
+.circle {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 15vh;
+  background-color: red;
+  z-index: 2;
 }
 
 
-
-.Main{
-  grid-area: Main;
-  background: linear-gradient(to left top, #9198e5,#00a7da); 
+.circle0 {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 15vh;
+  background-color: yellow;
+  z-index: 3;
+  top: 33.3%;
 }
 
+.circle1 {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 15vh;
+  background-color: greenyellow;
+  z-index: 4;
+  top: 66.6%;
+}
+
+.square {
+  width: 30vh;
+  height: 90vh;
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  z-index: 1;
+}

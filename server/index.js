@@ -6,7 +6,7 @@ const server = http.createServer();
 server.listen(webSocketsServerPort);
 console.log('listening on port 8000');
 
-var ws281x = require('rpi-ws281x-native'); // RASPIIIIIIII
+//var ws281x = require('rpi-ws281x-native'); // RASPIIIIIIII
 
 const wsServer = new webSocketServer({
     httpServer: server
@@ -30,6 +30,7 @@ wsServer.on('request', function (request) {
     console.log('connected: ' + userID + ' in ' + Object.getOwnPropertyNames(clients));
 });
 
+/* 
 class Example {// RASPIIIIIIII
 
     constructor() {
@@ -72,4 +73,5 @@ class Example {// RASPIIIIIIII
         // Render to strip
         ws281x.render(pixels);
     }
-}
+} 
+*/
